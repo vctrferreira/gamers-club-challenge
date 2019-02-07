@@ -138,9 +138,13 @@ customElements.define('playoffs-ui', class extends HTMLElement {
                 background-color: black;
                 color: white;
               }
+              .container div {
+                  height: fit-content;
+              }
         </style>
 
         <h2>Playoffs</h2>
+        <div class="container">
         `;
         for (const phase of championship.playoff.bracketsHistory) {
             data += '<div style="display: inline-block;">';
@@ -160,9 +164,10 @@ customElements.define('playoffs-ui', class extends HTMLElement {
             }
             data += '</div>';
         }
+        data += '</div>';
+
         shadowRoot.innerHTML = data;
     }
 });
 
-
-console.log(championship)
+console.log(championship);
