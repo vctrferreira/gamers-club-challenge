@@ -1,0 +1,8 @@
+{
+  "name": "gc_championship",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vctrferreira/gamers-club-challenge.git",
+  "author": "Victor Ferreira <victtorferreiralima@gmail.com>",
+  "license": "MIT"
+}
