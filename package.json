@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/vctrferreira/gamers-club-challenge.git",
   "author": "Victor Ferreira <victtorferreiralima@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
+  }
 }
