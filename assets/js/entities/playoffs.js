@@ -29,6 +29,8 @@ export default class Playoffs {
 
         if (winners.length > 1) {
             this.bracketsRound(winners);
+        } else {
+            alert(`Time ${winners[0].name} foi o vencedor!`);
         }
     }
 }
