@@ -1,12 +1,14 @@
 export default class Match {
-    constructor (teamA, teamB) {
+    constructor (teamA, teamB, isPlayoff = false) {
         this.teamA = teamA;
         this.teamB = teamB;
 
         this.scoreTeamA = 0;
         this.scoreTeamB = 0;
-
+        
+        this.isPlayoff = isPlayoff;
         this.winner = undefined;
+
     }
 
     addScoreTeamA() {

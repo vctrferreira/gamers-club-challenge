@@ -12,7 +12,7 @@ export default class Team {
     addMatch(match) {
         this.matchHistory.push(match);
 
-        if (match.winner === this) {
+        if (match.winner === this && !match.isPlayoff) {
             this.addWin();
         }
     }

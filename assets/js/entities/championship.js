@@ -1,5 +1,6 @@
-import Team from './team.js';
 import Group from './group.js';
+import Playoffs from './playoffs.js';
+import Team from './team.js';
 
 
 export default class Championship {
@@ -9,9 +10,11 @@ export default class Championship {
 
         this.teams = null;
         this.groups = null;
+        this.playoffTeamList = [];
+        this.playoff = null;
     }
 
-    start() {
+    startGroups() {
         this.createTeams();
         this.generateGroups();
     }
@@ -39,6 +42,18 @@ export default class Championship {
         });
     }
 
-    startPlayoffs() {}
+    startPlayoffs() {
+        this.groups.forEach(group => {
+            this.playoffTeamList = this.playoffTeamList.concat(group.members.slice(0, 2));
+        });
+
+        this.playoffTeamList.sort(_ => {
+            return Math.random > 0.5 ? 1 : -1;
+        });
+
+        this.playoff = new Playoffs(this.playoffTeamList);
+
+        this.playoff.start();
+    }
 }
 
